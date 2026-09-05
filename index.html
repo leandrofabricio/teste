@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Elena Rostova | Psicologia Clínica & Psicoterapia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7f4',
+                            100: '#e0efe9',
+                            200: '#c2dfd4',
+                            500: '#3a7d6e',
+                            600: '#2d6357',
+                            700: '#244f46',
+                            800: '#1d3e38',
+                            900: '#18332e',
+                        },
+                        warm: {
+                            50: '#faf8f5',
+                            100: '#f4efe6',
+                            200: '#e7dccb',
+                            800: '#4a4237',
+                            900: '#2c261e'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-warm-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-warm-200 shadow-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <!-- Logo / Brand -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-serif font-bold text-xl shadow-md group-hover:bg-brand-600 transition-colors">
+                    E
+                </div>
+                <div>
+                    <div class="font-serif font-bold text-lg text-slate-900 leading-tight">Dra. Elena Rostova</div>
+                    <div class="text-[11px] font-semibold tracking-wider text-brand-600 uppercase">Psicologia Clínica • CRP 06/184920</div>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#sobre" class="hover:text-brand-600 transition-colors">Sobre Mim</a>
+                <a href="#especialidades" class="hover:text-brand-600 transition-colors">Especialidades</a>
+                <a href="#como-funciona" class="hover:text-brand-600 transition-colors">Como Funciona</a>
+                <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+                <a href="link/index.html" class="text-xs bg-warm-100 text-slate-700 hover:bg-brand-100 hover:text-brand-800 px-3 py-1.5 rounded-lg transition-all font-semibold flex items-center gap-1.5">
+                    <i class="fa-solid fa-mobile-screen text-brand-600"></i>
+                    <span>Link da Bio</span>
+                </a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="javascript:void(0)" onclick="openWhatsappModal()" class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-brand-500/20 transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Agendar Consulta</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button onclick="toggleMobileNav()" class="md:hidden p-2 text-slate-600 hover:text-slate-900">
+                <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-nav" class="hidden md:hidden border-t border-warm-200 bg-white px-4 py-4 space-y-3">
+            <a href="#sobre" onclick="toggleMobileNav()" class="block py-2 text-slate-700 font-medium">Sobre Mim</a>
+            <a href="#especialidades" onclick="toggleMobileNav()" class="block py-2 text-slate-700 font-medium">Especialidades</a>
+            <a href="#como-funciona" onclick="toggleMobileNav()" class="block py-2 text-slate-700 font-medium">Como Funciona</a>
+            <a href="#faq" onclick="toggleMobileNav()" class="block py-2 text-slate-700 font-medium">Perguntas Frequentes</a>
+            <a href="link/index.html" class="block py-2 text-brand-600 font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>Ver Versão Biosite (Link na Bio)</span>
+            </a>
+            <div class="pt-2">
+                <a href="javascript:void(0)" onclick="openWhatsappModal()" class="w-full bg-emerald-600 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-white via-warm-50 to-brand-50/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Agenda aberta para atendimentos Online e Presencial
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-900 leading-[1.15] tracking-tight">
+                        Um espaço seguro para ressignificar emoções e reconectar-se com você.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Atendimento psicológico especializado com base na <strong>Terapia Cognitivo-Comportamental (TCC)</strong>. Acolhimento ético, científico e livre de julgamentos.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="javascript:void(0)" onclick="openWhatsappModal()" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-bold text-base shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-3 group">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Agendar Primeira Sessão</span>
+                            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="#sobre" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-6 py-4 rounded-xl font-semibold text-base transition-colors text-center">
+                            Conhecer a Abordagem
+                        </a>
+                    </div>
+
+                    <!-- Trust Highlights -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200/80 text-left">
+                        <div>
+                            <div class="font-bold text-slate-900 text-base">Sigilo Total</div>
+                            <div class="text-xs text-slate-500">Código de Ética CFP</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-base">Sessões 50min</div>
+                            <div class="text-xs text-slate-500">Formato individual</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-base">Plataforma Segura</div>
+                            <div class="text-xs text-slate-500">Videoconferência HD</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image / Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-2 bg-gradient-to-tr from-brand-500 to-amber-200 rounded-3xl blur-lg opacity-30 transform rotate-2"></div>
+                        
+                        <div class="relative bg-white p-3 rounded-3xl shadow-xl border border-warm-200">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800&h=1000" 
+                                 alt="Dra. Elena Rostova Psicóloga" 
+                                 class="w-full h-[420px] object-cover rounded-2xl">
+                            
+                            <div class="p-4 bg-warm-50 rounded-xl mt-3 border border-warm-100 flex items-center justify-between">
+                                <div>
+                                    <div class="font-serif font-bold text-slate-900 text-sm">Dra. Elena Rostova</div>
+                                    <div class="text-xs text-slate-500">Mestre em Psicologia pela USP</div>
+                                </div>
+                                <span class="text-xs bg-brand-500 text-white font-semibold px-2.5 py-1 rounded-lg">CRP 06/184920</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre" class="py-16 sm:py-24 bg-white border-y border-warm-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-warm-200">
+                        <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&q=80&w=800&h=600" 
+                             alt="Consultório Acolhedor" 
+                             class="w-full h-80 sm:h-96 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
+                            <p class="text-white text-sm italic font-serif">"A psicoterapia não muda o passado, mas amplia a forma como você enxerga e vive o presente."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 order-1 lg:order-2 space-y-5">
+                    <div class="text-xs font-bold uppercase tracking-widest text-brand-600">Sobre Mim</div>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+                        Acolhimento fundamentado em ciência e empatia
+                    </h2>
+                    
+                    <p class="text-slate-600 leading-relaxed">
+                        Olá, sou a Elena Rostova. Atuo há mais de 8 anos auxiliando adultos a lidarem com sintomas de ansiedade, sobrecarga emocional, crise profissional e desafios relacionais.
+                    </p>
+
+                    <p class="text-slate-600 leading-relaxed">
+                        Meu trabalho é baseado na <strong>Terapia Cognitivo-Comportamental (TCC)</strong>, uma abordagem objetiva, estruturada e respaldada por amplas evidências científicas. O foco é identificar padrões de pensamento e comportamento que geram sofrimento, desenvolvendo estratégias práticas para conquistar maior autonomia e bem-estar.
+                    </p>
+
+                    <div class="pt-2 grid sm:grid-cols-2 gap-3 text-sm">
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="fa-solid fa-circle-check text-brand-500"></i>
+                            <span>Pós-graduação em Neuropsicologia</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="fa-solid fa-circle-check text-brand-500"></i>
+                            <span>Membro Ativo da ABPTC</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="fa-solid fa-circle-check text-brand-500"></i>
+                            <span>Especialista em Gestão do Estresse</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-slate-700">
+                            <i class="fa-solid fa-circle-check text-brand-500"></i>
+                            <span>Atendimento com autorização CFP</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIALTIES SECTION -->
+    <section id="especialidades" class="py-16 sm:py-24 bg-warm-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <div class="text-xs font-bold uppercase tracking-widest text-brand-600">Especialidades</div>
+                <h2 class="text-2xl sm:text-4xl font-serif font-bold text-slate-900">Como posso te ajudar</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Demandas frequentes trabalhadas no processo terapêutico com adultos.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-warm-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-900 mb-2">Ansiedade & Síndrome do Pânico</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Manejo de preocupações excessivas, crises de ansiedade, taquicardia e pensamentos acelerados com técnicas práticas.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-warm-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-900 mb-2">Burnout & Estresse Profissional</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Recuperação do esgotamento físico e mental, imposição de limites saudáveis no trabalho e reorganização de carreira.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-warm-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-heart-crack"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-900 mb-2">Conflitos Relacionais & Luto</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Desenvolvimento de comunicação assertiva, elaboração de términos, perdas significativas e fortalecimento de vínculos.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-warm-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-900 mb-2">Autoestima & Autocobrança</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Superação do perfeccionismo disfuncional, autocrítica severa e construção de uma autoimagem mais compassiva.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-warm-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-900 mb-2">Transições de Vida</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Suporte emocional em momentos de mudança: mudança de país/cidade, divórcio, maternidade/paternidade ou aposentadoria.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-6 rounded-2xl border border-warm-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-slate-900 mb-2">Depressão & Desmotivação</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Reativação comportamental gradual, resgate do sentido de vida e superação da apatia e tristeza profunda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="como-funciona" class="py-16 sm:py-24 bg-white border-y border-warm-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <div class="text-xs font-bold uppercase tracking-widest text-brand-600">Passo a Passo</div>
+                <h2 class="text-2xl sm:text-4xl font-serif font-bold text-slate-900">Como funciona o atendimento</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="bg-warm-50 p-8 rounded-2xl border border-warm-200 relative text-center sm:text-left">
+                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center mb-4 mx-auto sm:mx-0">1</div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Contato Inicial</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Você clica no botão do WhatsApp, tira dúvidas rápidas sobre horários e valores e agendamos a primeira sessão.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-warm-50 p-8 rounded-2xl border border-warm-200 relative text-center sm:text-left">
+                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center mb-4 mx-auto sm:mx-0">2</div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Primeira Sessão (Avaliação)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Um espaço de acolhimento para entender suas queixas principiais, histórico de vida e alinhar as metas do processo.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-warm-50 p-8 rounded-2xl border border-warm-200 relative text-center sm:text-left">
+                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center mb-4 mx-auto sm:mx-0">3</div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Acompanhamento Contínuo</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Sessões semanais de 50 minutos com aplicação de exercícios e técnicas focadas nas suas metas individuais.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 sm:py-24 bg-warm-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 space-y-3">
+                <div class="text-xs font-bold uppercase tracking-widest text-brand-600">Esclarecimentos</div>
+                <h2 class="text-2xl sm:text-4xl font-serif font-bold text-slate-900">Perguntas Frequentes (FAQ)</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Accordion 1 -->
+                <div class="bg-white rounded-2xl border border-warm-200 overflow-hidden shadow-xs">
+                    <button onclick="toggleFaq('faq-1')" class="w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors">
+                        <span>Aceita plano de saúde ou convênio?</span>
+                        <i id="icon-faq-1" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-1" class="hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                        O atendimento é estritamente particular. No entanto, forneço nota fiscal e recibos adequados para que você solicite o <strong>reembolso junto ao seu plano de saúde</strong> (a maioria das operadoras oferece essa opção para consultas com psicólogo).
+                    </div>
+                </div>
+
+                <!-- Accordion 2 -->
+                <div class="bg-white rounded-2xl border border-warm-200 overflow-hidden shadow-xs">
+                    <button onclick="toggleFaq('faq-2')" class="w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors">
+                        <span>Como funciona a terapia online? É tão eficaz quanto a presencial?</span>
+                        <i id="icon-faq-2" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-2" class="hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                        Sim! Estudos científicos comprovam que a terapia online possui exatamente a mesma eficácia da presencial. As sessões ocorrem via videochamada em plataforma criptografada e segura. Você só precisa de um local privativo e boa conexão.
+                    </div>
+                </div>
+
+                <!-- Accordion 3 -->
+                <div class="bg-white rounded-2xl border border-warm-200 overflow-hidden shadow-xs">
+                    <button onclick="toggleFaq('faq-3')" class="w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors">
+                        <span>Qual é a duração e frequência das sessões?</span>
+                        <i id="icon-faq-3" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-3" class="hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                        Cada sessão dura 50 minutos. No início do processo, a frequência recomendada é semanal para garantir a evolução do tratamento. Conforme os objetivos são alcançados, é feito o espaçamento quinzenal até a alta.
+                    </div>
+                </div>
+
+                <!-- Accordion 4 -->
+                <div class="bg-white rounded-2xl border border-warm-200 overflow-hidden shadow-xs">
+                    <button onclick="toggleFaq('faq-4')" class="w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors">
+                        <span>Como é a primeira consulta?</span>
+                        <i id="icon-faq-4" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-4" class="hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                        A primeira sessão é um momento de escuta e acolhimento livre de pressões. Nós conversaremos sobre o que te motivou a buscar ajuda, seus sintomas, suas expectativas e combinaremos a melhor forma de trabalharmos juntos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
+                <div class="md:col-span-5 space-y-3">
+                    <div class="font-serif font-bold text-xl text-white">Dra. Elena Rostova</div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Psicologia Clínica orientada pela ética, empatia e compromisso científico. Atendimento presencial em São Paulo - SP e online para todo o mundo.
+                    </p>
+                    <div class="text-xs text-brand-400 font-medium">CRP 06/184920</div>
+                </div>
+
+                <div class="md:col-span-3 space-y-2 text-xs">
+                    <div class="font-bold text-white text-sm mb-3">Links Rápidos</div>
+                    <p><a href="#sobre" class="hover:text-white transition-colors">Sobre a Psicóloga</a></p>
+                    <p><a href="#especialidades" class="hover:text-white transition-colors">Especialidades</a></p>
+                    <p><a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona</a></p>
+                    <p><a href="link/index.html" class="hover:text-white text-brand-400 transition-colors">Versão Biosite (Link na Bio)</a></p>
+                </div>
+
+                <div class="md:col-span-4 space-y-3 text-xs">
+                    <div class="font-bold text-white text-sm mb-3">Aviso Importante & Emergências</div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Este site não oferece atendimento imediato para pessoas em crise suicida. Em caso de emergência, ligue para o <strong>188 (CVV - Centro de Valorização da Vida)</strong> ou dirija-se ao hospital mais próximo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>© 2026 Dra. Elena Rostova. Todos os direitos reservados.</p>
+                <p>Código em conformidade com as diretrizes do CFP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: Simulated WhatsApp Booking -->
+    <div id="modal-whatsapp" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center space-y-4 shadow-2xl relative">
+            <button onclick="closeModal('modal-whatsapp')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mx-auto">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-slate-900 text-lg">Iniciando conversa...</h3>
+                <p class="text-xs text-slate-500 mt-1">Você será redirecionado para o WhatsApp da Dra. Elena Rostova com a mensagem pré-formatada.</p>
+            </div>
+
+            <div class="bg-emerald-50 p-3 rounded-xl text-left border border-emerald-100 text-xs text-emerald-900 font-mono">
+                "Olá, Dra. Elena! Vim através do seu site e gostaria de informações sobre horários disponíveis para consulta."
+            </div>
+
+            <div class="pt-2 space-y-2">
+                <button onclick="confirmWhatsappSim()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-sm transition-colors">
+                    Abrir WhatsApp Agora
+                </button>
+                <button onclick="closeModal('modal-whatsapp')" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-2.5 rounded-xl text-xs transition-colors">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-slate-900 text-white text-xs px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 transition-all duration-300 transform translate-y-20 opacity-0 z-50">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-msg">Mensagem enviada!</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById('mobile-nav');
+            const icon = document.getElementById('menu-icon');
+            if (mobileNav.classList.contains('hidden')) {
+                mobileNav.classList.remove('hidden');
+                icon.className = "fa-solid fa-xmark text-xl";
+            } else {
+                mobileNav.classList.add('hidden');
+                icon.className = "fa-solid fa-bars text-xl";
+            }
+        }
+
+        function toggleFaq(faqId) {
+            const content = document.getElementById(faqId);
+            const icon = document.getElementById('icon-' + faqId);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function openWhatsappModal() {
+            document.getElementById('modal-whatsapp').classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function confirmWhatsappSim() {
+            closeModal('modal-whatsapp');
+            showToast('Redirecionando para o WhatsApp...');
+            // Coloque o link real do seu WhatsApp abaixo quando publicar:
+            // window.open('https://wa.me/5511999999999?text=Ol%C3%A1,%20Dra.%20Elena!', '_blank');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

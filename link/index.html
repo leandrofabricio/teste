@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Elena Rostova | Psicologia Clínica (Link na Bio)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7f4',
+                            100: '#e0efe9',
+                            200: '#c2dfd4',
+                            500: '#3a7d6e',
+                            600: '#2d6357',
+                            700: '#244f46',
+                            800: '#1d3e38',
+                            900: '#18332e',
+                        },
+                        warm: {
+                            50: '#faf8f5',
+                            100: '#f4efe6',
+                            200: '#e7dccb',
+                            800: '#4a4237',
+                            900: '#2c261e'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .pulse-soft {
+            animation: pulse-animation 2.5s infinite;
+        }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-warm-100 via-warm-50 to-brand-50 min-h-screen py-8 px-4 flex justify-center items-center font-sans text-slate-800 antialiased">
+
+    <div class="w-full max-w-md mx-auto">
+        
+        <!-- Mobile Card Container -->
+        <div class="bg-warm-50 rounded-[2.5rem] p-6 shadow-2xl border border-warm-200 relative overflow-hidden">
+            
+            <!-- Top Subtle Accent Line -->
+            <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-brand-500 via-emerald-400 to-brand-700"></div>
+
+            <!-- Header Bio -->
+            <div class="text-center mt-2 mb-6">
+                <div class="relative inline-block mb-3">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300&h=300" 
+                         alt="Dra. Elena Rostova - Psicóloga" 
+                         class="w-28 h-28 rounded-full object-cover mx-auto shadow-md border-4 border-white ring-2 ring-brand-500/20">
+                    <span class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center text-[10px] text-white" title="Atendendo Agora">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </div>
+
+                <h1 class="text-xl font-bold text-slate-900 font-serif tracking-tight">Dra. Elena Rostova</h1>
+                <p class="text-xs font-semibold uppercase tracking-wider text-brand-600 mb-2">Psicóloga Clínica • CRP 06/184920</p>
+                
+                <!-- Badges -->
+                <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                    <span class="text-[11px] bg-brand-100 text-brand-800 px-2.5 py-0.5 rounded-full font-medium">Terapia Cognitivo-Comportamental</span>
+                    <span class="text-[11px] bg-amber-100 text-amber-900 px-2.5 py-0.5 rounded-full font-medium">Online & Presencial</span>
+                </div>
+
+                <p class="text-xs text-slate-600 max-w-xs mx-auto leading-relaxed">
+                    Acolhimento humanizado focado em ansiedade, autoestima e transições de vida.
+                </p>
+            </div>
+
+            <!-- Primary Action (CTA WhatsApp) -->
+            <div class="mb-4">
+                <a href="javascript:void(0)" onclick="openWhatsappModal()" 
+                   class="pulse-soft w-full bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-2xl font-bold flex items-center justify-between shadow-lg shadow-emerald-600/20 transition-all hover:-translate-y-0.5 group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-lg">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-sm font-bold leading-tight">Agendar Consulta no WhatsApp</div>
+                            <div class="text-[11px] text-emerald-100 font-normal">Ver horários disponíveis hoje</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-xs opacity-70 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Secondary Links List -->
+            <div class="space-y-2.5">
+                <!-- Link to Full Site -->
+                <a href="../index.html" 
+                   class="w-full bg-white hover:bg-brand-50/50 text-slate-800 p-3.5 rounded-xl text-sm font-semibold flex items-center justify-between border border-slate-200/80 shadow-sm transition-all hover:border-brand-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <span class="text-slate-800">Conhecer o Site Completo</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400 group-hover:text-brand-600 group-hover:translate-x-1 transition-all"></i>
+                </a>
+
+                <!-- About & Approach -->
+                <a href="../index.html#sobre" 
+                   class="w-full bg-white hover:bg-brand-50/50 text-slate-800 p-3.5 rounded-xl text-sm font-semibold flex items-center justify-between border border-slate-200/80 shadow-sm transition-all hover:border-brand-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <span class="text-slate-800">Sobre Mim e Abordagem</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400 group-hover:text-brand-600 group-hover:translate-x-1 transition-all"></i>
+                </a>
+
+                <!-- Specialities -->
+                <a href="../index.html#especialidades" 
+                   class="w-full bg-white hover:bg-brand-50/50 text-slate-800 p-3.5 rounded-xl text-sm font-semibold flex items-center justify-between border border-slate-200/80 shadow-sm transition-all hover:border-brand-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <span class="text-slate-800">Demandas & Especialidades</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400 group-hover:text-brand-600 group-hover:translate-x-1 transition-all"></i>
+                </a>
+
+                <!-- Location & Modality -->
+                <button onclick="openModal('modal-loc')" 
+                   class="w-full bg-white hover:bg-brand-50/50 text-slate-800 p-3.5 rounded-xl text-sm font-semibold flex items-center justify-between border border-slate-200/80 shadow-sm transition-all hover:border-brand-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <span class="text-slate-800">Consultório & Atendimento Online</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-hover:text-brand-600 transition-all"></i>
+                </button>
+
+                <!-- FAQ quick popup -->
+                <a href="../index.html#faq" 
+                   class="w-full bg-white hover:bg-brand-50/50 text-slate-800 p-3.5 rounded-xl text-sm font-semibold flex items-center justify-between border border-slate-200/80 shadow-sm transition-all hover:border-brand-300 group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <span class="text-slate-800">Dúvidas Frequentes (FAQ)</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400 group-hover:text-brand-600 group-hover:translate-x-1 transition-all"></i>
+                </a>
+            </div>
+
+            <!-- Social Networks -->
+            <div class="flex justify-center items-center gap-4 mt-6 pt-4 border-t border-slate-200/60 text-slate-500">
+                <a href="#" class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:text-pink-600 hover:border-pink-200 transition-all shadow-xs">
+                    <i class="fa-brands fa-instagram text-base"></i>
+                </a>
+                <a href="#" class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:text-blue-600 hover:border-blue-200 transition-all shadow-xs">
+                    <i class="fa-brands fa-linkedin-in text-base"></i>
+                </a>
+                <a href="#" class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:text-red-600 hover:border-red-200 transition-all shadow-xs">
+                    <i class="fa-regular fa-envelope text-base"></i>
+                </a>
+            </div>
+
+            <!-- Footnote / Ethics -->
+            <div class="mt-6 text-center text-[10px] text-slate-400 space-y-1">
+                <p>📍 São Paulo - SP / Atendimento Todo o Brasil & Exterior</p>
+                <p class="text-slate-400">Em caso de crise ou emergência, ligue para o <strong>CVV (188)</strong>.</p>
+                <p class="pt-2 text-[9px]">© 2026 Dra. Elena Rostova • Direitos Reservados</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL 1: Simulated WhatsApp Booking -->
+    <div id="modal-whatsapp" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center space-y-4 shadow-2xl relative">
+            <button onclick="closeModal('modal-whatsapp')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mx-auto">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-slate-900 text-lg">Iniciando conversa...</h3>
+                <p class="text-xs text-slate-500 mt-1">Você será redirecionado para o WhatsApp da Dra. Elena Rostova com a mensagem pré-formatada.</p>
+            </div>
+
+            <div class="bg-emerald-50 p-3 rounded-xl text-left border border-emerald-100 text-xs text-emerald-900 font-mono">
+                "Olá, Dra. Elena! Vim através do seu Instagram e gostaria de informações sobre horários para consulta."
+            </div>
+
+            <div class="pt-2 space-y-2">
+                <button onclick="confirmWhatsappSim()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-sm transition-colors">
+                    Abrir WhatsApp Agora
+                </button>
+                <button onclick="closeModal('modal-whatsapp')" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-2.5 rounded-xl text-xs transition-colors">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Location Info Modal -->
+    <div id="modal-loc" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-left space-y-4 shadow-2xl relative">
+            <button onclick="closeModal('modal-loc')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Modalidades de Atendimento</h3>
+                    <p class="text-[11px] text-slate-500">Locais e formato das sessões</p>
+                </div>
+            </div>
+
+            <div class="space-y-3 text-xs text-slate-600 border-t border-slate-100 pt-3">
+                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                    <div class="font-bold text-slate-900 mb-0.5">🌐 Atendimento Online</div>
+                    <p>Plataforma Criptografada para todo o Brasil e brasileiros no exterior.</p>
+                </div>
+
+                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                    <div class="font-bold text-slate-900 mb-0.5">🏢 Consultório Presencial</div>
+                    <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP (Próximo ao Metrô Trianon-Masp).</p>
+                </div>
+            </div>
+
+            <button onclick="closeModal('modal-loc')" class="w-full bg-slate-900 text-white font-bold py-2.5 rounded-xl text-xs">
+                Entendi
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-slate-900 text-white text-xs px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 transition-all duration-300 transform translate-y-20 opacity-0 z-50">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-msg">Mensagem enviada!</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function openWhatsappModal() {
+            document.getElementById('modal-whatsapp').classList.remove('hidden');
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function confirmWhatsappSim() {
+            closeModal('modal-whatsapp');
+            showToast('Redirecionando para o WhatsApp...');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
